@@ -25,16 +25,16 @@ export const getSingleRecipe = async (req, res) => {
 	}
 };
 
-// export const createRecipe = async (req, res) => {
-// 	try {
-// 		const { title, body, description } = req.body;
-// 		const newRecipe = await Recipe.create({ title, body, description });
-// 		res.status(201).json(newRecipe);
-// 		console.log(newRecipe);
-// 	} catch (err) {
-// 		res.status(500).json({ error: err.message });
-// 	}
-// };
+export const createRecipe = async (req, res) => {
+	try {
+		const { title, body, description, cover } = req.body;
+		const newRecipe = await Recipe.create({ title, body, description, cover });
+		res.status(201).json(newRecipe);
+		console.log(newRecipe);
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+};
 
 // export const getAllRecipes = async (req, res) => {
 // 	try {

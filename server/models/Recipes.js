@@ -5,6 +5,7 @@ const recipesSchema = new Schema({
 	title: String,
 	body: String,
 	description: String,
+	cover: String,
 });
 
 //using the model method to declare model
